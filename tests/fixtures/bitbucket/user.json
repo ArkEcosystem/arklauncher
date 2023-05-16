@@ -1,0 +1,23 @@
+{
+    "display_name": "hello",
+    "uuid": "{fd474093-fdff-4446-9463-24a92c2d0194}",
+    "links": {
+        "hooks": { "href": "https://api.bitbucket.org/2.0/users/%7Bfd474093-fdff-4446-9463-24a92c2d0194%7D/hooks" },
+        "self": { "href": "https://api.bitbucket.org/2.0/users/%7Bfd474093-fdff-4446-9463-24a92c2d0194%7D" },
+        "repositories": {
+            "href": "https://api.bitbucket.org/2.0/repositories/%7Bfd474093-fdff-4446-9463-24a92c2d0194%7D"
+        },
+        "html": { "href": "https://bitbucket.org/%7Bfd474093-fdff-4446-9463-24a92c2d0194%7D/" },
+        "avatar": {
+            "href": "https://secure.gravatar.com/avatar/ef27bd3b9dad433b9cb7739efeec105a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-0.png"
+        },
+        "snippets": { "href": "https://api.bitbucket.org/2.0/snippets/%7Bfd474093-fdff-4446-9463-24a92c2d0194%7D" }
+    },
+    "username": "hello",
+    "nickname": "hello",
+    "created_on": "2019-12-30T09:18:51.257945+00:00",
+    "is_staff": false,
+    "account_status": "active",
+    "type": "user",
+    "account_id": "5e09c078cbf1830daa9c5068"
+}

@@ -1,0 +1,8 @@
+{
+    "541b4960f23bd": {
+        "SSHKEYID": "541b4960f23bd",
+        "date_created": null,
+        "name": "test",
+        "ssh_key": "ssh-rsa AA... test@example.com"
+    }
+}

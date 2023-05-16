@@ -1,0 +1,37 @@
+{
+    "id": 1234,
+    "created": "2018-01-01T00:01:01",
+    "status": "running",
+    "label": "ubuntu-us-southeast",
+    "image": "linode/ubuntu18.04",
+    "type": "g6-standard-1",
+    "group": "Linode-Group",
+    "tags": [],
+    "region": "us-southeast",
+    "hypervisor": "kvm",
+    "updated": "2018-01-01T00:01:01",
+    "ipv4": ["104.131.186.241"],
+    "ipv6": "c001:d00d::1234",
+    "specs": {
+        "disk": 81920,
+        "memory": 4096,
+        "vcpus": 2,
+        "transfer": 4000
+    },
+    "alerts": {
+        "cpu": 180,
+        "network_in": 10,
+        "network_out": 10,
+        "transfer_quota": 80,
+        "io": 10000
+    },
+    "backups": {
+        "enabled": true,
+        "schedule": {
+            "day": "Saturday",
+            "window": "W22"
+        },
+        "last_successful": "2018-01-01T00:01:01"
+    },
+    "watchdog_enabled": true
+}

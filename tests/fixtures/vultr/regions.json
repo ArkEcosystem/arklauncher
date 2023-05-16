@@ -1,0 +1,22 @@
+{
+    "1": {
+        "DCID": "1",
+        "name": "New Jersey",
+        "country": "US",
+        "continent": "North America",
+        "state": "NJ",
+        "ddos_protection": true,
+        "block_storage": true,
+        "regioncode": "EWR"
+    },
+    "2": {
+        "DCID": "2",
+        "name": "Chicago",
+        "country": "US",
+        "continent": "North America",
+        "state": "IL",
+        "ddos_protection": false,
+        "block_storage": false,
+        "regioncode": "ORD"
+    }
+}

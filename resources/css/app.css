@@ -1,0 +1,20 @@
+/** Tailwind **/
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/** 3rd party **/
+@import '../../node_modules/swiper/swiper-bundle.min.css';
+
+/** UI Repo Styles **/
+@import '../../vendor/arkecosystem/foundation/resources/assets/css/styles.css';
+@import '../../vendor/arkecosystem/foundation/resources/assets/css/_cookie-consent.css';
+
+/** Custom Styles */
+@import '_general.css';
+@import '_pagination.css';
+@import '_theme.css';
+
+[x-cloak] {
+    display: none !important;
+}

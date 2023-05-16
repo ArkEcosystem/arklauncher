@@ -1,0 +1,1 @@
+(self.webpackChunk=self.webpackChunk||[]).push([[268],{149:()=>{window.fileDownload=function(){return{save:function(e,n,o,c){var d=new Blob([n],{type:o}),a=window.document.createElement("a");a.href=window.URL.createObjectURL(d),a.download="".concat(e,".").concat(c),document.body.appendChild(a),a.click(),document.body.removeChild(a)}}}}},e=>{var n;n=149,e(e.s=n)}]);

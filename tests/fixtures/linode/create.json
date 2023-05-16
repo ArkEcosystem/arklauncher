@@ -1,0 +1,37 @@
+{
+    "id": 1234,
+    "label": "linode123",
+    "status": "running",
+    "type": "g6-standard-2",
+    "group": "Linode-Group",
+    "tags": [],
+    "created": "2018-01-01T00:01:01",
+    "region": "us-east",
+    "image": "linode/debian9",
+    "hypervisor": "kvm",
+    "updated": "2018-01-01T00:01:01",
+    "ipv4": [],
+    "ipv6": "c001:d00d::1234",
+    "specs": {
+        "disk": 81920,
+        "memory": 4096,
+        "vcpus": 2,
+        "transfer": 4000
+    },
+    "alerts": {
+        "cpu": 180,
+        "network_in": 10,
+        "network_out": 10,
+        "transfer_quota": 80,
+        "io": 10000
+    },
+    "backups": {
+        "enabled": true,
+        "schedule": {
+            "day": "Saturday",
+            "window": "W22"
+        },
+        "last_successful": "2018-01-01T00:01:01"
+    },
+    "watchdog_enabled": true
+}

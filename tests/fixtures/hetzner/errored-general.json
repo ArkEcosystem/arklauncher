@@ -1,0 +1,11 @@
+{
+    "action": {
+        "id": 13,
+        "command": "command",
+        "status": "error",
+        "error": {
+            "code": "action_failed",
+            "message": "Action failed"
+        }
+    }
+}

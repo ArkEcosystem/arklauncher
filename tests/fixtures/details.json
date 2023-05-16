@@ -1,0 +1,8 @@
+{
+    "name": "foo",
+    "seeds": ["123.123.123.123"],
+    "genesis_hash": "bar",
+    "repository": "https://foo_repo.com",
+    "api_port": 123,
+    "assets_repository": "https://foo_assets_repo.com"
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         printerClass="NunoMaduro\Collision\Adapters\Phpunit\Printer">
+    <testsuites>
+        <testsuite name="Analysis">
+            <directory suffix="Test.php">./tests/Analysis</directory>
+        </testsuite>
+        <testsuite name="App">
+            <directory suffix="Test.php">./tests/App</directory>
+        </testsuite>
+        <testsuite name="Domain">
+            <directory suffix="Test.php">./tests/Domain</directory>
+        </testsuite>
+        <testsuite name="Support">
+            <directory suffix="Test.php">./tests/Support</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./app</directory>
+            <exclude>
+                <directory suffix=".php">./app/App/Console/Playbooks</directory>
+                <file>./app/App/Console/Commands/RunPlaybookCommand.php</file>
+                <directory suffix=".php">./app/App/Exceptions</directory>
+                <directory suffix=".php">./app/App/Nova</directory>
+                <directory suffix=".php">./app/App/Providers</directory>
+                <directory suffix=".php">./app/App/User/Controllers/Auth</directory>
+                <directory suffix=".php">./app/Support/Eloquent/Concerns</directory>
+                <file>./app/App/BaseApplication.php</file>
+                <file>./app/App/Console/Kernel.php</file>
+                <file>./app/App/Token/Requests/UpdateTokenLogoRequest.php</file>
+                <file>./app/App/User/Requests/UpdateUserPhotoRequest.php</file>
+                <file>./app/Console/Kernel.php</file>
+                <file>./app/Domain/Server/Services/Providers/AWS.php</file>
+                <file>./app/Support/Components/Component.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+    <php>
+        <!-- PHP -->
+        <ini name="memory_limit" value="-1" />
+        <!-- Laravel -->
+        <server name="APP_ENV" value="testing"/>
+        <server name="DB_CONNECTION" value="pgsql"/>
+        <server name="DB_HOST" value="127.0.0.1"/>
+        <server name="DB_PORT" value="5432"/>
+        <server name="DB_DATABASE" value="deployer"/>
+        <server name="DB_USERNAME" value="deployer"/>
+        <server name="BCRYPT_ROUNDS" value="4"/>
+        <server name="CACHE_DRIVER" value="array"/>
+        <server name="MAIL_MAILER" value="array"/>
+        <server name="QUEUE_CONNECTION" value="sync"/>
+        <server name="SESSION_DRIVER" value="array"/>
+        <server name="TELESCOPE_ENABLED" value="false"/>
+        <server name="DEMO_MODE_ENABLED" value="false" />
+        <server name="ZENDESK_SUBDOMAIN" value="subdomain"/>
+        <server name="ZENDESK_TOKEN" value="token"/>
+        <server name="ZENDESK_USERNAME" value="username"/>
+    </php>
+</phpunit>

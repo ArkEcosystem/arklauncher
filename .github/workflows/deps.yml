@@ -1,0 +1,87 @@
+name: Dependencies
+
+on:
+    schedule:
+        - cron: '0 0 * * 0'
+    workflow_dispatch:
+
+jobs:
+    php:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+                  token: ${{ secrets.GH_TOKEN }}
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.1'
+                  extensions: mbstring, dom, fileinfo, intl, gd, imagick, bcmath, soap, zip, sqlite
+                  coverage: none
+
+            - name: Update PHP dependencies
+              run: npx @faustbrian/node-composer-check-updates --caret-minor
+
+            - name: Install PHP dependencies
+              run: composer update --no-ansi --no-interaction --no-progress --prefer-dist --optimize-autoloader --ignore-platform-reqs
+
+            - name: Install JS dependencies
+              run: yarn --ignore-engines
+
+            - name: Rebuild assets
+              run: yarn prod
+
+            - name: Create Pull Request
+              id: cpr
+              uses: peter-evans/create-pull-request@v4
+              with:
+                  token: ${{ secrets.GH_TOKEN }}
+                  commit-message: 'chore: update PHP dependencies'
+                  committer: GitHub <noreply@github.com>
+                  author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+                  branch: chore/update-php-dependencies
+                  delete-branch: true
+                  title: 'chore: update PHP dependencies'
+                  draft: false
+
+    js:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+                  token: ${{ secrets.GH_TOKEN }}
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.1'
+                  extensions: mbstring, dom, fileinfo, intl, gd, imagick, bcmath, soap, zip, sqlite
+                  coverage: none
+
+            - name: Install PHP dependencies
+              run: composer install --no-ansi --no-interaction --no-progress --prefer-dist --optimize-autoloader --ignore-platform-reqs
+
+            - name: Update JS dependencies
+              run: npx npm-check-updates --configFilePath ./vendor/arkecosystem/foundation/
+
+            - name: Install Updated JS dependencies
+              run: yarn --ignore-engines
+
+            - name: Rebuild assets
+              run: yarn prod
+
+            - name: Create Pull Request
+              id: cpr
+              uses: peter-evans/create-pull-request@v4
+              with:
+                  token: ${{ secrets.GH_TOKEN }}
+                  commit-message: 'chore: update JavaScript dependencies'
+                  committer: GitHub <noreply@github.com>
+                  author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+                  branch: chore/update-javascript-dependencies
+                  delete-branch: true
+                  title: 'chore: update JavaScript dependencies'
+                  draft: false

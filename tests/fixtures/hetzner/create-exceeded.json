@@ -1,0 +1,6 @@
+{
+    "error": {
+        "message": "server limit exceeded",
+        "code": "resource_limit_exceeded"
+    }
+}

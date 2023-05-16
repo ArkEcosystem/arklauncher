@@ -1,0 +1,7 @@
+{
+    "error": {
+        "message": "unable to authenticate",
+        "code": "unauthorized",
+        "details": null
+    }
+}
