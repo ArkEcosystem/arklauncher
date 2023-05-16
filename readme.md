@@ -90,7 +90,7 @@ By using ARKLauncher, you agree to indemnify and hold harmless the author of ARK
 
 ARKLauncher is a powerful open-source tool for creating and deploying custom blockchains based on the ARK Core layer 1 protocol in as little as an hour hereinafter referred to as "the Program". The Program is licensed under the terms of the GNU General Public License version 3 ("GPLv3").
 
-Copyright (C) 2023 [Ardent](https://ardenthq.com/)
+Copyright (C) 2023 [ARK Ecosystem](https://arkscic.com/)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -107,4 +107,4 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 ## License
 
-[GNU General Public License v3.0](LICENSE) © [Ardent](https://ardenthq.com/)
+[GNU General Public License v3.0](LICENSE) © [ARK Ecosystem](https://arkscic.com/)
