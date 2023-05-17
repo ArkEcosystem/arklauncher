@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "network": 23,
+    "typeGroup": 1,
+    "type": 2,
+    "nonce": "1",
+    "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+    "fee": "0",
+    "amount": "0",
+    "asset": {
+        "delegate": {
+            "username": "genesis_1"
+        }
+    },
+    "signature": "3045022100b0048e3385c7c7ebd648a63b63f57f4556b7aaaf6dce3cc8e59c1627d8bd9c68022035e1825cc7eea2855ba7f48316b8d6c029caf68239a71af27abb860f9ec8fe9c",
+    "id": "84ac436903adfb635b9a524656bb1999df741d68e3761235b93c7a9e1ecab2ce"
+}

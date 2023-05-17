@@ -1,0 +1,6 @@
+{
+    "id": 1234,
+    "created": "2018-01-01T00:01:01",
+    "label": "My SSH Key",
+    "ssh_key": ""
+}

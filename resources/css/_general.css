@@ -1,0 +1,230 @@
+html {
+    @apply min-h-full bg-white;
+}
+
+.content {
+    @apply leading-normal;
+}
+
+.table-header {
+    @apply text-2xl font-bold;
+}
+
+.paragraph-description {
+    @apply leading-7;
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    @apply fixed top-0 left-0 z-10 w-screen h-screen overflow-hidden;
+}
+
+.bridgechain-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: 1rem 1rem;
+    @apply w-full;
+}
+
+@screen sm {
+    .bridgechain-items-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+        gap: 1rem 1rem;
+        @apply w-full;
+    }
+}
+
+.create-token--input-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1rem 1rem;
+}
+
+.contact-form--input-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1rem 1rem;
+}
+
+@screen md {
+    .contact-form--input-grid {
+        grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    }
+}
+
+.collaborator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    gap: 1rem 1rem;
+}
+
+@screen md {
+    .collaborator-grid {
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+/** ToS **/
+.terms-of-service ol {
+    @apply mt-3 list-decimal list-inside;
+}
+
+.terms-of-service ol ol {
+    @apply ml-4;
+}
+
+.terms-of-service ol li {
+    @apply mt-1;
+}
+
+.terms-of-service ol.roman {
+    list-style-type: lower-roman;
+}
+
+.terms-of-service--heading {
+    @apply mt-4 text-lg font-semibold;
+}
+
+/** Privacy Policy **/
+.privacy-policy ul {
+    @apply mt-3 list-disc list-inside;
+}
+
+.privacy-policy ul ul {
+    @apply ml-4;
+}
+
+.privacy-policy ul li {
+    @apply mt-1;
+}
+
+div.disabled {
+    @apply shadow-none cursor-not-allowed pointer-events-none bg-theme-secondary-200 text-theme-secondary-400;
+}
+
+.notification-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+/* Home Landing Page */
+
+#swiper-tiers .swiper-slide {
+    @apply h-auto;
+}
+
+.home-header-image {
+    background: linear-gradient(0deg, #fff 50%, #f7fafb 50%);
+}
+
+@screen md {
+    .home-header-image {
+        background: linear-gradient(0deg, #fff 70%, #f7fafb 30%);
+    }
+}
+
+body {
+    @apply flex flex-col min-h-screen font-sans text-theme-secondary-700;
+}
+
+#app {
+    @apply flex-grow;
+}
+
+/** Headings without H **/
+.header-1 {
+    @apply text-4xl leading-tight mb-2 font-bold text-theme-secondary-900;
+}
+
+.header-2 {
+    @apply text-2xl mb-1 font-bold text-theme-secondary-900;
+}
+
+.header-3 {
+    @apply text-xl mb-1 font-bold text-theme-secondary-900;
+}
+
+.header-4 {
+    @apply text-lg mb-1 font-bold text-theme-secondary-900;
+}
+
+/** Welcome Screens **/
+.welcome-screen {
+    max-height: 200px;
+    @apply object-contain w-full h-full;
+}
+
+@screen md {
+    .welcome-screen {
+        max-height: 400px;
+    }
+}
+
+/** Beta Notice **/
+.beta-notice {
+    max-height: 104px;
+    @apply object-contain w-full h-full;
+}
+
+#swiper-tokens,
+#swiper-tokens .swiper-wrapper {
+    @apply m-0;
+}
+
+#swiper-tokens .swiper-wrapper {
+    @apply pb-8;
+}
+
+.table-container table tbody td:first-child {
+    @apply pl-0;
+}
+
+.table-container table tbody td:last-child {
+    @apply pr-0;
+}
+
+button.dropdown-entry {
+    @apply flex items-center bg-opacity-0;
+}
+
+.alert-content > a {
+    @apply link font-semibold;
+}
+
+/** Dropdown Entry **/
+.dropdown-entry {
+    @apply flex space-x-2 items-center hover:bg-theme-primary-100;
+}
+.dropdown-entry span {
+    @apply flex items-center space-x-2;
+}
+
+.dropdown-entry.delete-server {
+    @apply text-theme-danger-400 hover:text-theme-danger-400 hover:bg-theme-danger-100 !important;
+}
+
+.dropdown-entry-disabled {
+    @apply dropdown-entry bg-theme-secondary-100 text-theme-secondary-500;
+}
+
+.form-radio:checked.radio-checkmark {
+    @apply text-theme-primary-500 !important;
+}
+
+.form-checkbox:checked {
+    @apply text-theme-primary-600 !important;
+}

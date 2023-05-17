@@ -1,0 +1,108 @@
+{
+    "version": 0,
+    "totalAmount": "2100000000000000",
+    "totalFee": "0",
+    "reward": "0",
+    "payloadHash": "5e0e414ec7f01bebaa2c389ccf25d18bc7c34423a078ddb18939e8054908b53d",
+    "timestamp": 0,
+    "numberOfTransactions": 6,
+    "payloadLength": 861,
+    "previousBlock": null,
+    "generatorPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+    "transactions": [{
+        "version": 2,
+        "network": 23,
+        "typeGroup": 1,
+        "type": 0,
+        "nonce": "1",
+        "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+        "fee": "0",
+        "amount": "2100000000000000",
+        "recipientId": "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC",
+        "signature": "3045022100aeb0c3f0587bf18e4a95ea9059790d9597a7426dafc4816ff98d4c70d3b2feb4022067e71bf227bc965ea291d1330ae77101177443fb390d8d32f6521c7d9d924e62",
+        "id": "b066e6a2a368e01891f056d6e534d3fca56bccc81d7cb4cc3dc21003d62c4588"
+    }, {
+        "version": 2,
+        "network": 23,
+        "typeGroup": 1,
+        "type": 2,
+        "nonce": "1",
+        "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+        "fee": "0",
+        "amount": "0",
+        "asset": {
+            "delegate": {
+                "username": "genesis_1"
+            }
+        },
+        "signature": "3045022100b0048e3385c7c7ebd648a63b63f57f4556b7aaaf6dce3cc8e59c1627d8bd9c68022035e1825cc7eea2855ba7f48316b8d6c029caf68239a71af27abb860f9ec8fe9c",
+        "id": "84ac436903adfb635b9a524656bb1999df741d68e3761235b93c7a9e1ecab2ce"
+    }, {
+        "version": 2,
+        "network": 23,
+        "typeGroup": 1,
+        "type": 2,
+        "nonce": "1",
+        "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+        "fee": "0",
+        "amount": "0",
+        "asset": {
+            "delegate": {
+                "username": "genesis_2"
+            }
+        },
+        "signature": "304402207eed84d35e41fd9b7dfe0c3b9fc7161fa1b90f652560ddb4ded6435dcb04c4cb02205c75ae4018d2572fca6387eeeaee18e59b6c4e6a3b6e26c023b81b89d613d18d",
+        "id": "78c81934f776d441e08bce633cace644b5093ee39e3a994236e753131e30a255"
+    }, {
+        "version": 2,
+        "network": 23,
+        "typeGroup": 1,
+        "type": 2,
+        "nonce": "1",
+        "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+        "fee": "0",
+        "amount": "0",
+        "asset": {
+            "delegate": {
+                "username": "genesis_3"
+            }
+        },
+        "signature": "3045022100ef7ca7310bad31fa898253161ec7e46d3de1fb9b50380756e58865d8b06626bb022064093528c39184f81cc603b007946dac6df1faf7c739d71425a5de5fc6ea571b",
+        "id": "1a2d2e0ac603c74156d1dcce2003a9a282a50fa8f1f467f341dbb58c3445096e"
+    }, {
+        "version": 2,
+        "network": 23,
+        "typeGroup": 1,
+        "type": 2,
+        "nonce": "1",
+        "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+        "fee": "0",
+        "amount": "0",
+        "asset": {
+            "delegate": {
+                "username": "genesis_4"
+            }
+        },
+        "signature": "304402202121baf68ce255891690ea773a78929c97fdbabb460498f5a7a18b6138e95b2f02207603cefd416d0c7723819d397f15655c0ed3c0f17e99fd2140a3eda1de6dae8e",
+        "id": "df28096ae0ad0303c65f2363e3bf0c21b3d4232d00f053292e3bcac73267cc93"
+    }, {
+        "version": 2,
+        "network": 23,
+        "typeGroup": 1,
+        "type": 2,
+        "nonce": "1",
+        "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+        "fee": "0",
+        "amount": "0",
+        "asset": {
+            "delegate": {
+                "username": "genesis_5"
+            }
+        },
+        "signature": "304502210096e9ecce2f6d32237901fbdd52f6d6165f9257045d9e58a784fe2362584cfcaa022044081088051e626825398fa3cfef01787f9f00d9e12e603e8e803334a034c9b1",
+        "id": "b91303a6d7085941be3a7d4f60aa1199b29b40e418dd74e2491499004baf62f3"
+    }],
+    "height": 1,
+    "id": "4705186044723696832",
+    "blockSignature": "3045022100b296d0a9284004a78a0ff9b55460b38a225b5dfdb8585c4ce99210899a93df14022072cac99c89035c5bb53f3cbc5726e8c04360e98d21e5f6366a2a4e948366c856"
+}

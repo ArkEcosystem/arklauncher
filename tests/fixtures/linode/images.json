@@ -1,0 +1,21 @@
+{
+    "data": [
+        {
+            "id": "linode/ubuntu18.04",
+            "label": "Ubuntu 18.04 LTS",
+            "deprecated": false,
+            "size": 2600,
+            "created": "2018-04-26T22:23:37",
+            "description": null,
+            "created_by": "linode",
+            "type": "manual",
+            "is_public": true,
+            "vendor": "Ubuntu",
+            "expiry": null,
+            "eol": "2023-04-30T04:00:00"
+        }
+    ],
+    "page": 1,
+    "pages": 1,
+    "results": 1
+}

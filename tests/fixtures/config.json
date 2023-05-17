@@ -1,0 +1,56 @@
+{
+    "coreIp": "127.0.0.1",
+    "p2pPort": 4000,
+    "apiPort": 4003,
+    "webhookPort": 4004,
+    "wif": 1,
+    "explorerIp": "0.0.0.0",
+    "explorerPort": 4200,
+    "chainName": "test",
+    "token": "tes",
+    "databaseHost": "localhost",
+    "databasePort": "5432",
+    "databaseName": "core_bridgechain",
+    "symbol": "t",
+    "mainnetPeers": [],
+    "devnetPeers": [],
+    "mainnetPrefix": "t",
+    "devnetPrefix": "d",
+    "testnetPrefix": "e",
+    "fees": {
+        "static": {
+            "transfer": 10000000,
+            "vote": 100000000,
+            "secondSignature": 500000000,
+            "delegateRegistration": 2500000000,
+            "multiSignature": 500000000,
+            "ipfs": 0,
+            "multiPayment": 0,
+            "delegateResignation": 2500000000
+        },
+        "dynamic": {
+            "enabled": false,
+            "minFeePool": 3000,
+            "minFeeBroadcast": 3000,
+            "addonBytes": {
+                "transfer": 100,
+                "secondSignature": 250,
+                "delegateRegistration": 400000,
+                "vote": 100,
+                "multiSignature": 500,
+                "ipfs": 250,
+                "multiPayment": 500,
+                "delegateResignation": 400000
+            }
+        }
+    },
+    "forgers": 51,
+    "blocktime": 8,
+    "transactionsPerBlock": 150,
+    "totalPremine": 2100000000000000,
+    "rewardHeightStart": 1,
+    "rewardPerBlock": 200000000,
+    "vendorFieldLength": 255,
+    "bridgechainPath": "$HOME/core-bridgechain",
+    "explorerPath": "$HOME/core-explorer"
+}

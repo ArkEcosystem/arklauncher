@@ -1,0 +1,37 @@
+{
+    "id": 1234,
+    "label": "",
+    "status": "running",
+    "image": "",
+    "type": "",
+    "group": "Linode-Group",
+    "tags": [],
+    "created": "2018-01-01T00:01:01",
+    "updated": "2018-01-01T00:01:01",
+    "region": "",
+    "hypervisor": "kvm",
+    "ipv4": [],
+    "ipv6": "c001:d00d::1234",
+    "specs": {
+      "disk": 81920,
+      "memory": 4096,
+      "vcpus": 2,
+      "transfer": 4000
+    },
+    "alerts": {
+      "cpu": 180,
+      "network_in": 10,
+      "network_out": 10,
+      "transfer_quota": 80,
+      "io": 10000
+    },
+    "backups": {
+      "enabled": true,
+      "schedule": {
+        "day": "Saturday",
+        "window": "W22"
+      },
+      "last_successful": "2018-01-01T00:01:01"
+    },
+    "watchdog_enabled": true
+}

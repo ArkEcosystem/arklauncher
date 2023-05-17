@@ -1,0 +1,121 @@
+{
+    "server": {
+        "id": 42,
+        "name": "my-server",
+        "status": "running",
+        "created": "2020-03-18T21:02:22+00:00",
+        "public_net": {
+            "ipv4": {
+                "ip": "1.2.3.4",
+                "blocked": false,
+                "dns_ptr": "static.232.34.12.49.clients.your-server.de"
+            },
+            "ipv6": {
+                "ip": "2a01:4f8:c17:66d8::/64",
+                "blocked": false,
+                "dns_ptr": []
+            },
+            "floating_ips": []
+        },
+        "private_net": [],
+        "server_type": {
+            "id": 12,
+            "name": "ccx21",
+            "description": "CCX21 Dedicated CPU",
+            "cores": 4,
+            "memory": 16,
+            "disk": 160,
+            "deprecated": null,
+            "prices": [
+                {
+                    "location": "fsn1",
+                    "price_hourly": {
+                        "net": "0.0600000000",
+                        "gross": "0.0726000000000000"
+                    },
+                    "price_monthly": {
+                        "net": "34.9000000000",
+                        "gross": "42.2290000000000000"
+                    }
+                },
+                {
+                    "location": "nbg1",
+                    "price_hourly": {
+                        "net": "0.0600000000",
+                        "gross": "0.0726000000000000"
+                    },
+                    "price_monthly": {
+                        "net": "34.9000000000",
+                        "gross": "42.2290000000000000"
+                    }
+                },
+                {
+                    "location": "hel1",
+                    "price_hourly": {
+                        "net": "0.0600000000",
+                        "gross": "0.0726000000000000"
+                    },
+                    "price_monthly": {
+                        "net": "34.9000000000",
+                        "gross": "42.2290000000000000"
+                    }
+                }
+            ],
+            "storage_type": "local",
+            "cpu_type": "dedicated"
+        },
+        "datacenter": {
+            "id": 4,
+            "name": "fsn1-dc14",
+            "description": "Falkenstein 1 DC14",
+            "location": {
+                "id": 1,
+                "name": "fsn1",
+                "description": "Falkenstein DC Park 1",
+                "country": "DE",
+                "city": "Falkenstein",
+                "latitude": 50.47612,
+                "longitude": 12.370071,
+                "network_zone": "eu-central"
+            },
+            "server_types": {
+                "supported": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+                "available": [1, 2, 3, 4, 5, 7, 9, 11, 12, 13, 14, 15],
+                "available_for_migration": [1, 2, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15]
+            }
+        },
+        "image": {
+            "id": 168855,
+            "type": "system",
+            "status": "available",
+            "name": "ubuntu-18.04",
+            "description": "Ubuntu 18.04",
+            "image_size": null,
+            "disk_size": 5,
+            "created": "2018-05-02T11:02:30+00:00",
+            "created_from": null,
+            "bound_to": null,
+            "os_flavor": "ubuntu",
+            "os_version": "18.04",
+            "rapid_deploy": true,
+            "protection": {
+                "delete": false
+            },
+            "deprecated": null,
+            "labels": []
+        },
+        "iso": null,
+        "rescue_enabled": false,
+        "locked": false,
+        "backup_window": null,
+        "outgoing_traffic": 0,
+        "ingoing_traffic": 0,
+        "included_traffic": 21990232555520,
+        "protection": {
+            "delete": false,
+            "rebuild": false
+        },
+        "labels": [],
+        "volumes": []
+    }
+}

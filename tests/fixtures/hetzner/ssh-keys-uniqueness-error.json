@@ -1,0 +1,11 @@
+{
+    "error": {
+        "message": "SSH key with the same fingerprint already exists",
+        "code": "uniqueness_error",
+        "details": {
+            "fields": {
+                "name": "public_key"
+            }
+        }
+    }
+}

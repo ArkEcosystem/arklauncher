@@ -1,0 +1,7 @@
+{
+  "error": {
+    "message": "405 Method Not Allowed",
+    "code": "method_not_allowed",
+    "details": null
+  }
+}

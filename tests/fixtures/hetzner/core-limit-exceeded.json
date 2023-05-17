@@ -1,0 +1,9 @@
+{
+    "error": {
+        "message": "core limit exceeded",
+        "code": "resource_limit_exceeded",
+        "details": {
+            "name": "dedicated_core_limit"
+        }
+    }
+}

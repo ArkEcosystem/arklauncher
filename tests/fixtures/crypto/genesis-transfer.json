@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "network": 23,
+    "typeGroup": 1,
+    "type": 0,
+    "nonce": "1",
+    "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+    "fee": "0",
+    "amount": "2100000000000000",
+    "recipientId": "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC",
+    "signature": "3045022100aeb0c3f0587bf18e4a95ea9059790d9597a7426dafc4816ff98d4c70d3b2feb4022067e71bf227bc965ea291d1330ae77101177443fb390d8d32f6521c7d9d924e62",
+    "id": "b066e6a2a368e01891f056d6e534d3fca56bccc81d7cb4cc3dc21003d62c4588",
+    "recipientId": "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC"
+}

@@ -1,0 +1,3 @@
+{
+    "resources/js/**/*.js": ["npm run prod"]
+}

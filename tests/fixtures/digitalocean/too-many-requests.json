@@ -1,0 +1,4 @@
+{
+	"id": "too_many_requests",
+	"message": "API Rate limit exceeded."
+}

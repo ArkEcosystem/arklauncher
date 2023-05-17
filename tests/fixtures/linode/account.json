@@ -1,0 +1,21 @@
+{
+    "company": "",
+    "email": "jurienwentink@gmail.nl",
+    "first_name": "Juriën",
+    "last_name": "Wentink",
+    "address_1": "Orteliusstraat 63",
+    "address_2": "",
+    "city": "Amsterdam",
+    "state": "North Holland",
+    "zip": "1060",
+    "country": "NL",
+    "phone": "",
+    "balance": 0.0,
+    "tax_id": "",
+    "credit_card": { "last_four": "8008", "expiry": "06/2024" },
+    "balance_uninvoiced": 0.58,
+    "active_since": "2020-01-28T21:10:54",
+    "capabilities": ["Linodes", "NodeBalancers", "Block Storage", "Object Storage"],
+    "active_promotions": [],
+    "euuid": "67BB67D0-2BC8-48E5-854281DB86CD7438"
+}

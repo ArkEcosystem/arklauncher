@@ -1,0 +1,207 @@
+name: CI
+
+on:
+    push:
+        branches:
+            - "master"
+            - "develop"
+    pull_request:
+        types: [ready_for_review, synchronize, opened]
+
+jobs:
+    conflicts:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+
+            - name: Merge Conflict finder
+              uses: olivernybroe/action-conflict-finder@v4.0
+
+    analyse:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: "8.1"
+                  extensions: mbstring, dom, fileinfo, intl, gd, imagick, bcmath, soap, zip, sqlite, pcov
+                  coverage: pcov
+
+            - name: Cache dependencies
+              uses: actions/cache@v3
+              with:
+                  path: ~/.composer/cache/files
+                  key: dependencies-composer-${{ hashFiles('composer.json') }}
+
+            - name: Install Composer dependencies
+              run: composer install --no-ansi --no-interaction --no-progress --prefer-dist --optimize-autoloader --ignore-platform-reqs
+
+            - name: Prepare the application
+              run: cp .env.example .env && php artisan key:generate
+
+            - name: Run PHPStan
+              run: composer analyse
+
+    format:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+                  token: ${{ secrets.GH_TOKEN }}
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: "8.1"
+                  extensions: mbstring, dom, fileinfo, intl, gd, imagick, bcmath, soap, zip, sqlite, pcov
+                  coverage: pcov
+
+            - name: Install
+              run: composer install --no-ansi --no-interaction --no-progress --prefer-dist --optimize-autoloader --ignore-platform-reqs
+
+            - name: Run php-cs-fixer
+              run: PHP_CS_FIXER_IGNORE_ENV=true composer format
+
+            - uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                  commit_message: "style: resolve style guide violations"
+                  branch: ${{ github.head_ref }}
+
+    unit:
+        needs: [conflicts, analyse, format]
+
+        runs-on: ubuntu-latest
+
+        services:
+            postgres:
+                image: postgres:12
+                env:
+                    POSTGRES_DB: deployer
+                    POSTGRES_USER: deployer
+                    POSTGRES_PASSWORD: password
+                ports:
+                    - 5432:5432
+                options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: "8.1"
+                  extensions: mbstring, dom, fileinfo, intl, gd, imagick, bcmath, soap, zip, sqlite, pcov
+                  coverage: pcov
+
+            - name: Cache dependencies
+              uses: actions/cache@v3
+              with:
+                  path: ~/.composer/cache/files
+                  key: dependencies-composer-${{ hashFiles('composer.json') }}
+
+            - name: Install Composer dependencies
+              run: composer install --no-ansi --no-interaction --no-progress --prefer-dist --optimize-autoloader --ignore-platform-reqs
+
+            - name: Prepare the application
+              run: cp .env.example .env && php artisan key:generate
+
+            - name: Clear Config
+              run: php artisan config:clear && php artisan route:clear
+
+            - name: Run Tests
+              run: composer test:coverage
+              env:
+                  DB_CONNECTION: pgsql
+                  DB_HOST: 127.0.0.1
+                  DB_PORT: 5432
+                  DB_DATABASE: deployer
+                  DB_USERNAME: deployer
+                  DB_PASSWORD: password
+
+    # e2e:
+    #     needs: [conflicts, analyse, format]
+
+    #     runs-on: ubuntu-latest
+
+    #     services:
+    #         postgres:
+    #             image: postgres:12
+    #             env:
+    #                 POSTGRES_DB: homestead
+    #                 POSTGRES_USER: homestead
+    #                 POSTGRES_PASSWORD: password
+    #             ports:
+    #                 - 5432:5432
+    #             options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    #     steps:
+    #         - name: Checkout code
+    #           uses: actions/checkout@v3
+
+    #         - name: Setup PHP
+    #           uses: shivammathur/setup-php@v2
+    #           with:
+    #               php-version: "8.0"
+    #               extensions: mbstring, dom, fileinfo, intl, gd, imagick, bcmath, soap, zip, sqlite, pcov
+    #               coverage: pcov
+
+    #         - name: Cache dependencies
+    #           uses: actions/cache@v3
+    #           with:
+    #               path: ~/.composer/cache/files
+    #               key: dependencies-composer-${{ hashFiles('composer.json') }}
+
+    #         - name: Install Composer dependencies
+    #           run: composer install --no-ansi --no-interaction --no-progress --prefer-dist --optimize-autoloader --ignore-platform-reqs
+
+    #         - name: Prepare the application
+    #           run: cp .env.dusk .env
+
+    #         - name: Generate Application Key
+    #           run: php artisan key:generate
+
+    #         - name: Upgrade Chrome Driver
+    #           run: php artisan dusk:chrome-driver `/opt/google/chrome/chrome --version | cut -d " " -f3 | cut -d "." -f1`
+
+    #         - name: Start Chrome Driver
+    #           run: ./vendor/laravel/dusk/bin/chromedriver-linux &
+
+    #         - name: Run Laravel Server
+    #           run: php artisan serve &
+
+    #         - name: Run Dusk Tests
+    #           run: php artisan dusk
+
+    #         - name: Upload Screenshots
+    #           uses: actions/upload-artifact@v1
+    #           if: failure()
+    #           with:
+    #               name: dusk-screenshots
+    #               path: tests/Browser/screenshots
+
+    #         - name: Upload Console
+    #           uses: actions/upload-artifact@v1
+    #           if: failure()
+    #           with:
+    #               name: dusk-console
+    #               path: tests/Browser/console
+
+    #         - name: Upload Logs
+    #           uses: actions/upload-artifact@v1
+    #           if: failure()
+    #           with:
+    #               name: dusk-logs
+    #               path: storage/logs
