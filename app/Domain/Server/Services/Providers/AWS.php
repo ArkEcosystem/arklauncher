@@ -352,7 +352,7 @@ final class AWS implements ServerProviderClient
      */
     public function getImageId(): string
     {
-        return 'Ubuntu 18.04 x64';
+        return 'Ubuntu 22.04 x64';
     }
 
     /**

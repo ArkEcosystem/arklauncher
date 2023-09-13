@@ -1,7 +1,7 @@
 {
     "576965": {
         "SUBID": "576965",
-        "os": "Ubuntu 18.04 x64",
+        "os": "Ubuntu 22.04 x64",
         "ram": "4096 MB",
         "disk": "Virtual 60 GB",
         "main_ip": "123.123.123.123",

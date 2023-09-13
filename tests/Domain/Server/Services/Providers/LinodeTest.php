@@ -76,7 +76,7 @@ it('can create a new server', function () {
     expect($actual->region)->toBe('us-southeast');
     expect($actual->status)->toBe('running');
     expect($actual->remoteAddress)->toBe('104.131.186.241');
-    expect($actual->image)->toBe('linode/ubuntu18.04');
+    expect($actual->image)->toBe('linode/ubuntu22.04');
 });
 
 it('fails to create a new server if the servers limit is exceeded', function () {
@@ -119,7 +119,7 @@ it('can request the given server by id', function () {
     expect($actual->region)->toBe('us-southeast');
     expect($actual->status)->toBe('running');
     expect($actual->remoteAddress)->toBe('104.131.186.241');
-    expect($actual->image)->toBe('linode/ubuntu18.04');
+    expect($actual->image)->toBe('linode/ubuntu22.04');
 });
 
 it('will throw a server error if server does not exist', function () {
@@ -296,7 +296,7 @@ it('can request all the available images', function () {
     $image = $actual->items->first();
 
     expect($image->id)->toBe($source->client()->getImageId());
-    expect($image->name)->toBe('Ubuntu 18.04 LTS');
+    expect($image->name)->toBe('Ubuntu 22.04 LTS');
 });
 
 it('can create a secure shell key', function () {
