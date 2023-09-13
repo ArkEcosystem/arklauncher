@@ -350,7 +350,7 @@ final class Hetzner implements ServerProviderClient
      */
     public function getImageId(): string
     {
-        return 'ubuntu-18.04';
+        return 'ubuntu-22.04';
     }
 
     /**
