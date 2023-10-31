@@ -29,7 +29,7 @@ it('can store a new server on digitalocean', function () {
     ]);
 
     $image = ServerProviderImage::factory()->create([
-        'uuid'               => 'ubuntu-18-04-x64',
+        'uuid'               => 'ubuntu-22-04-x64',
     ]);
 
     $serverProvider->plans()->syncWithoutDetaching($plan);
@@ -71,7 +71,7 @@ it('can not store a server without correct permissions', function () {
     ]);
 
     $image = ServerProviderImage::factory()->create([
-        'uuid'               => 'ubuntu-18-04-x64',
+        'uuid'               => 'ubuntu-22-04-x64',
     ]);
 
     $serverProvider->plans()->syncWithoutDetaching($plan);
@@ -112,7 +112,7 @@ it('can store a new server on linode', function () {
     ]);
 
     $image = ServerProviderImage::factory()->create([
-        'uuid'               => 'linode/ubuntu18.04',
+        'uuid'               => 'linode/ubuntu22.04',
     ]);
 
     $serverProvider->plans()->syncWithoutDetaching($plan);
@@ -156,7 +156,7 @@ it('can store a new server on hetzner', function () {
     ]);
 
     $image = ServerProviderImage::factory()->create([
-        'uuid'               => 'ubuntu-18.04',
+        'uuid'               => 'ubuntu-22.04',
     ]);
 
     $serverProvider->plans()->syncWithoutDetaching($plan);
@@ -201,7 +201,7 @@ it('can store a new server on vultr', function () {
 
     $image = ServerProviderImage::factory()->create([
         'uuid'               => 270,
-        'name'               => 'Ubuntu 18.04 x64',
+        'name'               => 'Ubuntu 22.04 x64',
     ]);
 
     $serverProvider->plans()->syncWithoutDetaching($plan);
@@ -724,7 +724,7 @@ it('should trigger the server created event when the server is created', functio
     ]);
 
     $image = ServerProviderImage::factory()->create([
-        'uuid'               => 'ubuntu-18-04-x64',
+        'uuid'               => 'ubuntu-22-04-x64',
     ]);
 
     $serverProvider->plans()->syncWithoutDetaching($plan);

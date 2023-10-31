@@ -88,15 +88,15 @@
             "id": 168855,
             "type": "system",
             "status": "available",
-            "name": "ubuntu-18.04",
-            "description": "Ubuntu 18.04",
+            "name": "ubuntu-22.04",
+            "description": "Ubuntu 22.04",
             "image_size": null,
             "disk_size": 5,
             "created": "2018-05-02T11:02:30+00:00",
             "created_from": null,
             "bound_to": null,
             "os_flavor": "ubuntu",
-            "os_version": "18.04",
+            "os_version": "22.04",
             "rapid_deploy": true,
             "protection": {
                 "delete": false

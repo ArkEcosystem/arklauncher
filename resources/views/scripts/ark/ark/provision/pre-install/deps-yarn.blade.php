@@ -2,10 +2,13 @@ curl -X POST "{!! $deploymentStatus !!}" -d "status={{ ServerDeploymentStatus::I
 
 heading "Installing Yarn..."
 
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-(echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list)
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
+(echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list)
 
+apt_wait
 sudo apt-get update
-sudo apt-get install -y yarn
+
+apt_wait
+sudo DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a apt-get install yarn -yq
 
 success "Installed Yarn!"

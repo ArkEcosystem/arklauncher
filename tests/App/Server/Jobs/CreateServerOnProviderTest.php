@@ -36,7 +36,7 @@ it('creates a server on a provider and dispatches the server provisioner job', f
     $server->setMetaAttribute(ServerAttributeEnum::CREATOR, $user->id);
 
     ServerProviderImage::factory()->create([
-        'uuid'               => 'ubuntu-18-04-x64',
+        'uuid'               => 'ubuntu-22-04-x64',
     ]);
 
     $this->assertDatabaseMissing('servers', [
@@ -80,7 +80,7 @@ it('does not notify twice the same user when creation was successful', function 
     ]);
 
     ServerProviderImage::factory()->create([
-        'uuid'               => 'ubuntu-18-04-x64',
+        'uuid'               => 'ubuntu-22-04-x64',
     ]);
 
     $this->assertDatabaseMissing('servers', [

@@ -1,5 +1,6 @@
 heading "Installing program dependencies..."
 
+apt_wait
 sudo apt-get install build-essential libcairo2-dev pkg-config libtool autoconf automake python libpq-dev jq zip unzip -y
 
 {{-- We need to install jq-1.6 because it contains fixes that we need later on --}}

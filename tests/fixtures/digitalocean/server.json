@@ -18,9 +18,9 @@
         "snapshot_ids": [7938206],
         "image": {
             "id": 6918990,
-            "name": "18.04 x64",
+            "name": "22.04 x64",
             "distribution": "Ubuntu",
-            "slug": "ubuntu-18-04-x64",
+            "slug": "ubuntu-22-04-x64",
             "public": true,
             "regions": ["nyc1", "ams1", "sfo1", "nyc2", "ams2", "sgp1", "lon1", "nyc3", "ams3", "nyc3"],
             "created_at": "2014-10-17T20:24:33Z",

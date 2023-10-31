@@ -4,8 +4,8 @@
             "id": 4711,
             "type": "snapshot",
             "status": "available",
-            "name": "ubuntu-18.04",
-            "description": "Ubuntu 18.04 Standard 64 bit",
+            "name": "ubuntu-22.04",
+            "description": "Ubuntu 22.04 Standard 64 bit",
             "image_size": 2.3,
             "disk_size": 10,
             "created": "2016-01-30T23:50:00+00:00",
@@ -15,7 +15,7 @@
             },
             "bound_to": null,
             "os_flavor": "ubuntu",
-            "os_version": "18.04",
+            "os_version": "22.04",
             "rapid_deploy": false,
             "protection": {
                 "delete": false

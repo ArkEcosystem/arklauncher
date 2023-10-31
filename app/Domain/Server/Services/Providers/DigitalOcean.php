@@ -336,7 +336,7 @@ final class DigitalOcean implements ServerProviderClient
      */
     public function getImageId(): string
     {
-        return 'ubuntu-18-04-x64';
+        return 'ubuntu-22-04-x64';
     }
 
     /**

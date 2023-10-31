@@ -1,6 +1,6 @@
 cat << EOF | sudo tee /etc/apt/apt.conf.d/50unattended-upgrades > /dev/null
 Unattended-Upgrade::Allowed-Origins {
-    "Ubuntu zesty-security";
+    "Ubuntu jammy-security";
 };
 Unattended-Upgrade::Package-Blacklist {
     //
