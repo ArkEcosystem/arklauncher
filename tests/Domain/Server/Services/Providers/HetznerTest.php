@@ -344,7 +344,7 @@ it('can request all the available images', function () {
     $image = $actual->items->first();
 
     expect($image->id)->toBe($source->client()->getImageId());
-    expect($image->name)->toBe('Ubuntu 18.04 Standard 64 bit');
+    expect($image->name)->toBe('Ubuntu 22.04 Standard 64 bit');
 });
 
 it('should ignore images without a name', function () {
@@ -362,7 +362,7 @@ it('should ignore images without a name', function () {
     $image = $actual->items->first();
 
     expect($image->id)->toBe($source->client()->getImageId());
-    expect($image->name)->toBe('Ubuntu 18.04 Standard 64 bit');
+    expect($image->name)->toBe('Ubuntu 22.04 Standard 64 bit');
 });
 
 it('can create a secure shell key', function () {

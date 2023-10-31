@@ -323,7 +323,7 @@ final class Linode implements ServerProviderClient
      */
     public function getImageId(): string
     {
-        return 'linode/ubuntu18.04';
+        return 'linode/ubuntu22.04';
     }
 
     /**

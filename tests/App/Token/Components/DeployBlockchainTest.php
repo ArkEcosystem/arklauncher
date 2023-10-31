@@ -48,7 +48,7 @@ it('deploy method should call the right actions', function () {
         ]);
 
     $image = ServerProviderImage::factory()->create([
-            'uuid'               => 'ubuntu-18-04-x64',
+            'uuid'               => 'ubuntu-22-04-x64',
         ]);
 
     $serverProvider->plans()->syncWithoutDetaching($plan);
@@ -138,7 +138,7 @@ it('should trigger the server created event when created on deploy', function ()
         ]);
 
     $image = ServerProviderImage::factory()->create([
-            'uuid'               => 'ubuntu-18-04-x64',
+            'uuid'               => 'ubuntu-22-04-x64',
         ]);
 
     $serverProvider->plans()->syncWithoutDetaching($plan);
@@ -176,7 +176,7 @@ it('appends unique token for the server', function () {
     ]);
 
     $image = ServerProviderImage::factory()->create([
-        'uuid' => 'ubuntu-18-04-x64',
+        'uuid' => 'ubuntu-22-04-x64',
     ]);
 
     $serverProvider->plans()->syncWithoutDetaching($plan);

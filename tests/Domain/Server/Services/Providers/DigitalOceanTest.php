@@ -356,7 +356,7 @@ it('can request all the available images', function () {
     $image = $actual->items->first();
 
     expect($image->id)->toBe($source->client()->getImageId());
-    expect($image->name)->toBe('18.04.3 (LTS) x64');
+    expect($image->name)->toBe('22.04.3 (LTS) x64');
 });
 
 it('can create a secure shell key', function () {

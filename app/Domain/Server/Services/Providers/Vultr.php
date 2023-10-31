@@ -327,7 +327,7 @@ final class Vultr implements ServerProviderClient
      */
     public function getImageId(): string
     {
-        return '270'; //'Ubuntu 18.04 x64';
+        return '270'; //'Ubuntu 22.04 x64';
     }
 
     /**

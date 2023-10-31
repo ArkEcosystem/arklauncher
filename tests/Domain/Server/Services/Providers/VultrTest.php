@@ -34,7 +34,7 @@ beforeEach(closure: function () {
 
     $image = ServerProviderImage::factory()->create([
         'uuid'               => $this->source->client()->getImageId(),
-        'name'               => 'Ubuntu 18.04 x64',
+        'name'               => 'Ubuntu 22.04 x64',
     ]);
 
     $this->server = ServerModel::factory()->vultr()->createForTest([
@@ -77,7 +77,7 @@ it('can create a new server', function () {
     expect($actual->region)->toBe('New Jersey');
     expect($actual->status)->toBe('active');
     expect($actual->remoteAddress)->toBe('123.123.123.123');
-    expect($actual->image)->toBe('Ubuntu 18.04 x64');
+    expect($actual->image)->toBe('Ubuntu 22.04 x64');
 });
 
 it('fails to create a new server if the droplet limit is exceeded', function () {
@@ -120,7 +120,7 @@ it('can request the given server by id', function () {
     expect($actual->region)->toBe('New Jersey');
     expect($actual->status)->toBe('active');
     expect($actual->remoteAddress)->toBe('123.123.123.123');
-    expect($actual->image)->toBe('Ubuntu 18.04 x64');
+    expect($actual->image)->toBe('Ubuntu 22.04 x64');
 });
 
 it('will throw a server error if server does not exist', function () {
@@ -286,7 +286,7 @@ it('can request all the available images', function () {
     $image = $actual->items[270];
 
     expect($image->id)->toBe($source->client()->getImageId());
-    expect($image->name)->toBe('Ubuntu 18.04 x64');
+    expect($image->name)->toBe('Ubuntu 22.04 x64');
 });
 
 it('can create a secure shell key', function () {

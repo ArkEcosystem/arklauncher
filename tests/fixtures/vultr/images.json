@@ -1,7 +1,7 @@
 {
     "270": {
         "OSID": "270",
-        "name": "Ubuntu 18.04 x64",
+        "name": "Ubuntu 22.04 x64",
         "arch": "x64",
         "family": "ubuntu",
         "windows": false
@@ -15,7 +15,7 @@
     },
     "148": {
         "OSID": "148",
-        "name": "Ubuntu 18.04 i386",
+        "name": "Ubuntu 22.04 i386",
         "arch": "i386",
         "family": "ubuntu",
         "windows": false
