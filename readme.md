@@ -2,6 +2,9 @@
 
 ![ARKLauncher](banner.png)
 
+> [!IMPORTANT]
+> With [Mainsail](https://github.com/arkecosystem/mainsail) being in active development as replacement of ARK Core, we recommend to look into EVM compatible chains instead of deploying ARK Core networks through ARKLauncher. This repository is therefore archived and will not see further updates.
+
 ARKLauncher is a powerful tool that significantly reduces the time required to launch your own custom blockchain, removing much of the complexities associated with such a task. Using ARKLauncher’s Blockchain Wizard, you can set up and launch your own blockchain in just a few steps.
 
 ## Installation
